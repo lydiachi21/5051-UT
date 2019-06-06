@@ -20,30 +20,32 @@ namespace UnitTests.Models
             //Assert
             Assert.IsNotNull(result);
         }
+        [TestMethod]
         public void LogViewModel_Get_Default_Should_Pass()
         {
-            //Arrange
+            // Arrange
             var myTest = new LogViewModel();
 
-            //Act
+            // Act
             var result = myTest.LogList;
 
-            //Assert
+            // Assert
             Assert.IsNotNull(result);
         }
 
+        [TestMethod]
         public void LogViewModel_Set_Default_Should_Pass()
         {
-            //Arrange
+            // Arrange
             var myTest = new LogViewModel();
             var myList = new List<LogModel>();
             myList.Add(new LogModel { PhoneID = "Phone" });
 
-            //Act
+            // Act
             myTest.LogList = myList;
             var result = myTest.LogList;
 
-            //Assert
+            // Assert
             Assert.AreEqual("Phone", result[0].PhoneID);
         }
     }
