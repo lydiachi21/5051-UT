@@ -74,7 +74,7 @@ namespace UnitTests.Models
             var result = myTest.Update(myUpdate);
 
             // Assert
-            Assert.AreNotEqual(myTestID, myTest.ID);
+            Assert.AreEqual(myTestID, myTest.ID);
         }
     }
 }
